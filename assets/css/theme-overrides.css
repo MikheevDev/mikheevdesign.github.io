@@ -10,3 +10,16 @@ blockquote {
 .button, input[type=submit] {
   -webkit-appearance: none;
 }
+
+.uk-card {
+  border-radius: 3px;
+  transition: transform .1s;
+}
+
+.uk-button.uk-button-primary {
+  border-radius: 3px;
+}
+
+.uk-card.uk-card-hover:active {
+  transform: translateY(1px);
+}
