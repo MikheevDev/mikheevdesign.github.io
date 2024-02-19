@@ -1,5 +1,5 @@
 ---
 layout: portfolio
 title: Портфолио
-permalink: /portfolio/
+permalink: /projects/
 ---
