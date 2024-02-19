@@ -18,12 +18,14 @@ bigimg: /assets/img/bg.jpg
             <div>
             <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
+                  <a href="{{ project.url | relative_url }}">
                     <img src="{{ project.image }}" alt="{{ project.title }}">
+                  </a>
                 </div>
                 <div class="uk-card-body">
                     <h3 class="uk-card-title"><a class="uk-link-text"href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
                     <p> {{ project.description }}
-          <br><a href="{{ project.url | relative_url }}" class="uk-button uk-button-default">Подробнее</a><br>
+          <br><a href="{{ project.url | relative_url }}" class="uk-button uk-button-secondary">Подробнее</a><br>
           {% unless forloop.last %}
           <hr>
           {% endunless %}</p>
