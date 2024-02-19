@@ -52,7 +52,7 @@ paginate: 5
 # 4. Jekyll settings
 permalink: /blog/:year/:month/:day/:title/
 excerpt_separator: "<!--more-->"
-timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Novosibirsk # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # 5. Collections
@@ -61,32 +61,32 @@ timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_databas
 # Not using collections at this time
 
 # 7. Site settings
-name: Jekyll-UiKit
-title: Jekyll-UiKit
-author: Josh Pasholk
-email: josh.pasholk@gmail.com
+name: MikheevDesign
+title: Веб-дизайнер Михеев Сергей
+author: Mikheev Sergey
+email: mikheevwebdesign@yandex.ru
 description: >- # this means to ignore newlines until "baseurl:"
-  Build a professional portfolio site in minutes with Jekyll-Uikit!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
-avatar: /assets/avatar-icon.png #path/to/avatar.png
-lang: en
-locale: en_US
+  Я веб-разработчик, занимаюсь разработкой сайтов разной специализации и разного уровня сложности, а также, графическим дизайном. Территориально нахожусь в Новосибирске.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://mikheevdesign.ru" # the base hostname & protocol for your site, e.g. https://example.com
+avatar: /assets/i.jpg #path/to/avatar.png
+lang: ru
+locale: ru_RU
 
 to_top: true
 
 # disqus: ""
-twitter: "jpasholk"
-github: "jpasholk"
-buymeacoffee: "jpasholk"
+twitter: "mikheevdesign"
+github: "mikheevdev"
+buymeacoffee: "mikheevdesign"
 fb_app_id: "" # This is needed for FB Cards to work.
 google_analytics: "UA-108080968-3"
 google_ad_client: "pub-7840179511709652"
 
 #footer-links
 
-Twitter: "jpasholk"
-GitHub: "jpasholk"
+Twitter: "mikheevdesign"
+GitHub: "mikheevdev"
 RSS: true
 
 # Search Settings - you have to sign up for an algolia account and use your own credentials for this to work.
