@@ -2,7 +2,7 @@
 # pages in order as they should show up.
 main:
   - title: "Главная"
-    url: /
+    url: https://mikheevdesign.ru/
   - title: "Портфолио"
     url: /projects
   - title: "Блог"
