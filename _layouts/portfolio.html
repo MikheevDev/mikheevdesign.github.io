@@ -1,65 +1,280 @@
 ---
 layout: default
 ---
-<div class="uk-section uk-section-default">
-  <div class="uk-container">
-    
-    <div class="uk-button-group uk-margin-medium">
-      <button class="simulate-url uk-button uk-button-default" data-url="?filter=white">domain.com?filter=white</button>
-      <button class="simulate-url uk-button uk-button-primary" data-url="?filter=blue">domain.com?filter=blue</button>
-      <button class="simulate-url uk-button uk-button-secondary" data-url="?filter=black">domain.com?filter=black</button>
+{% for singleCollection in site.collections %}
+{% if  singleCollection.label == "portfolio" %}
+{% assign portfolioDir = singleCollection.relative_directory %}
+{% endif %}
+{% endfor %}
+
+{% assign portfolioTags =  site.portfolio | map: 'tags' | join: ','  | split: ',' | uniq %}
+
+<div class="portfolio">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+    <div class="post-content">
+        {{ content }}
     </div>
 
-    <div uk-filter="target: .js-filter">
-
-        <ul class="uk-subnav uk-subnav-pill">
-            <li uk-filter-control="[data-tags*='white']"><a href="#">White</a></li>
-            <li uk-filter-control="[data-tags*='blue']"><a href="#">Blue</a></li>
-            <li uk-filter-control="[data-tags*='black']"><a href="#">Black</a></li>
-            <li uk-filter-control="[data-tags*='dark']"><a href="#">Dark Colors</a></li>
-        </ul>
-
-        <ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid>
-            <li data-tags="white">
-                <div class="uk-card uk-card-default uk-card-body">Item</div>
-            </li>
-            <li data-tags="blue dark">
-                <div class="uk-card uk-card-primary uk-card-body">Item</div>
-            </li>
-            <li data-tags="white">
-                <div class="uk-card uk-card-default uk-card-body">Item</div>
-            </li>
-            <li data-tags="white">
-                <div class="uk-card uk-card-default uk-card-body">Item</div>
-            </li>
-            <li data-tags="black dark">
-                <div class="uk-card uk-card-secondary uk-card-body">Item</div>
-            </li>
-            <li data-tags="black dark">
-                <div class="uk-card uk-card-secondary uk-card-body">Item</div>
-            </li>
-            <li data-tags="blue dark">
-                <div class="uk-card uk-card-primary uk-card-body">Item</div>
-            </li>
-            <li data-tags="black dark">
-                <div class="uk-card uk-card-secondary uk-card-body">Item</div>
-            </li>
-            <li data-tags="blue dark">
-                <div class="uk-card uk-card-primary uk-card-body">Item</div>
-            </li>
-            <li data-tags="white">
-                <div class="uk-card uk-card-default uk-card-body">Item</div>
-            </li>
-            <li data-tags="blue dark">
-                <div class="uk-card uk-card-primary uk-card-body">Item</div>
-            </li>
-            <li data-tags="black dark">
-                <div class="uk-card uk-card-secondary uk-card-body">Item</div>
-            </li>
-        </ul>
-
+    <div class="portfolio-tags">
+        <a href="#portfolio-all-tags">All</a>
+        {% for tag in portfolioTags %}
+        <a href="#{{ tag }}">{{ tag }}</a>
+        {% endfor %}
     </div>
-    
-    
-  </div>
+
+    <div class="portfolio-wrapper">
+        {% for project in site.portfolio %}
+        {% assign imageFolder = project.relative_path | replace: portfolioDir, '/assets/img/portfolio' | replace: '.md', '/' %}
+        {% assign projectIndex = forloop.index %}
+        {% assign side = projectIndex | modulo:2 %}
+        {% if side == 1 %}
+        {% assign align-class="portfolio-l" %}
+        {% else %}
+        {% assign align-class="portfolio-r" %}
+        {% endif %}
+        <div class="portfolio-block {{ align-class }} {{ project.tags | join: " "}} {% if project.cover == nil %}limited-hover{% endif %}"
+            id="portfolio-block-{{ projectIndex }}">
+            <div class="portfolio-front"
+                style="background-image: url('{% if project.cover %}{{ project.cover | prepend: imageFolder | relative_url }}{% elsif project.modal[0].code %}{{ "/assets/img/logo_code.png" | relative_url }}{% elsif project.modal[0].img %}{{ project.modal[0].img | prepend: imageFolder | relative_url }}{% else %}{{ "/assets/img/logo_old.png" | relative_url }}{% endif %}');">
+            </div>
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-excerpt">
+                {% if project.title %}
+                <h3>{{ project.title }}</h3>
+                {% endif %}
+                <p>
+                    {% assign strippedContent = project.content | strip_html %}
+                    {{ strippedContent | truncate: 512 }}
+                </p>
+            </div>
+            <div class="portflio-links">
+                {% if project.link %}
+                <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
+                    <i class="material-icons">link</i>
+                </a>
+                {% endif %}
+                {% if project.modal %}
+                {% if project.modal[0].md or project.modal[0].code %}
+                <a href="#stackable-{{ projectIndex }}-1">
+                    <i class="material-icons">pageview</i>
+                </a>
+                {% else %}
+                <a href="#modal-gallery-{{ projectIndex }}">
+                    <i class="material-icons">pageview</i>
+                </a>
+                {% endif %}
+                {% elsif strippedContent.size > 512 %}
+                <a href="#stackable-{{ projectIndex }}-front">
+                    <i class="material-icons">pageview</i>
+                </a>
+                {% endif %}
+            </div>
+
+
+            {% if strippedContent.size > 512 %}
+            <section aria-hidden="true" aria-labelledby="stackable-label" class="modal--show"
+                id="stackable-{{ projectIndex }}-front" role="dialog" tabindex="-1">
+
+                <div class="modal-inner">
+                    <header>
+                        <h2 id="stackable-label">{{ project.title | escape }}</h2>
+                    </header>
+                    <div class="modal-content">
+                        {{ project.content }}
+                        <img alt="Project cover image" src="{{ project.cover | prepend: imageFolder | relative_url }}">
+                    </div>
+                    <footer>
+                        <p>
+                            {% if project.modal %}
+                            <a class="js-modal-close" data-close="Close" data-dismiss="modal" href="#!"
+                                title="Close this modal">Back</a>
+                            {% else %}
+                            <a class="js-modal-close" data-close="Close" data-dismiss="modal" href="#!"
+                                title="Close this modal">Close</a>
+                            {% endif %}
+                        </p>
+                    </footer>
+                </div>
+
+                <a class="modal-close js-modal-close" data-close="Close" data-dismiss="modal" href="#!"
+                    title="Close this modal">&times;</a>
+            </section>
+            {% endif %}
+
+            {% for i in project.modal %}
+            {% if i.md or i.code %}
+            <section aria-hidden="true" aria-labelledby="stackable-label" class="modal--show"
+                id="stackable-{{ projectIndex }}-{{ forloop.index }}" role="dialog" tabindex="-1">
+
+                <div class="modal-inner">
+                    <header>
+                        {% if i.md %}
+                        <h2 id="stackable-label">Markdown / Readme</h2>
+                        {% elsif i.code %}
+                        <h2 id="stackable-label">Code: {{ i.code.lang }}</h2>
+                        {% endif %}
+                    </header>
+                    <div class="modal-content">
+                        {% if i.md %}
+                        {% capture mdurl %}
+                        {% remote_include {{ i.md }} %}
+                        {% endcapture %}
+                        {{ mdurl | strip | markdownify }}
+                        {% elsif i.code %}
+                        {% capture codeurl %}
+                        {% remote_include {{ i.code.link }} %}
+                        {% endcapture %}
+                        {% if i.code.linenos %}
+                        {% highlight_param {{ i.code.lang }} {{ i.code.linenos }} %}
+                        {{ codeurl | strip }}
+                        {% endhighlight_param %}
+                        {% else %}
+                        {% highlight_param {{ i.code.lang }} %}
+                        {{ codeurl | strip }}
+                        {% endhighlight_param %}
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    <footer>
+                        <p>
+                            {% if forloop.first %}
+                            {% if strippedContent.size > 512 %}
+                            <a href="#stackable-{{ projectIndex }}-front">Expand description</a>
+                            {% endif %}
+                            {% if project.modal.size > 1 %}
+                            <a class="open-modal" href="#modal-gallery-{{ projectIndex }}" role="button"
+                                title="Open gallery modal">Open image gallery</a>
+                            {% endif %}
+                            {% else %}
+                            <a class="js-modal-close" data-close="Close" data-dismiss="modal" href="#!"
+                                title="Close this modal">Back</a>
+                            {% endif %}
+                        </p>
+                    </footer>
+                </div>
+
+                <a class="modal-close js-modal-close" data-close="Close" data-dismiss="modal" href="#!"
+                    title="Close this modal">&times;</a>
+            </section>
+            {% endif %}
+            {% endfor %}
+
+            {% if project.modal[0].md or project.modal[0].code %}
+            {% assign modaltest = true %}
+            {% else %}
+            {% assign modaltest = false %}
+            {% endif %}
+            {% unless project.modal.size == 1 and modaltest %}
+            <section aria-hidden="true" aria-labelledby="modal-label" class="portfolio-modal modal--gallery"
+                data-cssmodal-resize="true" id="modal-gallery-{{ projectIndex }}" role="dialog" tabindex="-1">
+                <div class="modal-inner">
+                    <div class="modal-content">
+                        <div class="spinner">
+                            <div class="spinner__outer"></div>
+                            <div class="spinner__inner"></div>
+                        </div>
+
+
+                        <div aria-atomic="false" aria-live="polite" class="modal-detail"></div>
+
+                        <ul class="modal--gallery-navigation">
+                            <li>
+                                <a class="modal--gallery-navigation-prev" href="#" title="Previous">Previous</a>
+                            </li>
+                            <li>
+                                <a class="modal--gallery-navigation-next" href="#" title="Next">Next</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="modal--gallery-caption"></div>
+
+                    <footer>
+                        <ul aria-hidden="true" class="modal-content-list is-active">
+                            {% for j in project.modal %}
+                            {% unless j.md and forloop.first %}
+                            <li data-caption="{{ j.text }}">
+                                {% if j.img %}
+                                <a href="#modal-gallery-{{ projectIndex }}/{{ forloop.index }}">
+                                    <img alt="{{ j.text }}"
+                                        data-src-fullsize="{{ j.img | prepend: imageFolder | relative_url }}">
+                                </a>
+                                {% elsif j.md %}
+                                <a href="#stackable-{{ projectIndex }}-{{ forloop.index }}">
+                                    <img alt="{{ j.text }}"
+                                        data-src-fullsize="{{ "/assets/img/portfolio/twotone_description_black_48pt_3x.png" | relative_url }}">
+                                </a>
+                                {% endif %}
+                            </li>
+                            {% endunless %}
+                            {% endfor %}
+                            {% if strippedContent.size > 512 %}
+                            <li data-caption="Expanded description">
+                                <a href="#stackable-{{ projectIndex }}-front">
+                                    <img alt="Expand description"
+                                        data-src-fullsize="{{ "/assets/img/portfolio/twotone_description_black_48pt_3x.png" | relative_url }}">
+                                </a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </footer>
+                </div>
+
+                <a class="modal-close js-modal-close" data-close="Close" data-dismiss="modal" href="#!"
+                    title="Close this modal">?</a>
+            </section>
+            {% endunless %}
+        </div>
+        {% endfor %}
+    </div>
+
 </div>
+
+<script>
+    /***
+     * Truncate excerpt paragraph if too long for current width, and trim white spaces.
+     */
+    (function () {
+        var blocks = document.querySelectorAll('.portfolio-excerpt');
+
+        for (var block of blocks) {
+            var pHeight = block.offsetHeight - block.querySelector('h3').offsetHeight;
+            var paragraph = block.querySelector('p');
+            var pText = paragraph.textContent;
+            pText = pText.trim();
+            var pFontSize = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+            pFontSize = parseInt(pFontSize.split('px')[0], 10);
+
+            var n = parseInt(paragraph.offsetWidth / pFontSize) * parseInt(pHeight / pFontSize);
+
+            paragraph.innerHTML = (pText.length > n) ? pText.substr(0, n - 1) + '&hellip;' : pText;
+        }
+
+    })();
+</script>
+
+<script>
+    function handleResize() {
+        if (window.innerWidth <= 640) {
+            document.querySelectorAll('.portfolio-modal').forEach((_) => {
+                _.setAttribute('data-cssmodal-resize', 'false');
+            })
+        } else {
+            document.querySelectorAll('.portfolio-modal').forEach((_) => {
+                _.setAttribute('data-cssmodal-resize', 'true');
+            })
+        }
+    }
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("load", handleResize);
+</script>
+
+<script src="{{ "/assets/script/portfolio-tag-filter.js" | relative_url }}"></script>
+<script src="{{ "/assets/script/modal.js" | relative_url }}"></script>
+<script src="{{ "/assets/script/modal-gallery.js" | relative_url }}"></script>
+<script src="{{ "/assets/script/modal-helper.js" | relative_url }}"></script>
+<script src="{{ "/assets/script/modal-maxwidth.js" | relative_url }}"></script>
+<script src="{{ "/assets/script/modal-resize.js" | relative_url }}"></script>
