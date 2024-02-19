@@ -61,8 +61,8 @@ timezone: Asia/Novosibirsk # https://en.wikipedia.org/wiki/List_of_tz_database_t
 # Not using collections at this time
 
 # 7. Site settings
-name: MikheevDesign
-title: Веб-дизайнер Михеев Сергей
+name: Веб-дизайнер Михеев Сергей
+title: MikheevDesign
 author: Mikheev Sergey
 email: f/xoqgdprr
 description: >- # this means to ignore newlines until "baseurl:"
