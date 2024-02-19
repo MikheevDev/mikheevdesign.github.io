@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: Portfolio
+title: Портфолио веб-дизайнера Михеева Сергея
 permalink: /portfolio/
 ---
 
