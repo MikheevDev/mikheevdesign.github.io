@@ -3,8 +3,8 @@
 main:
   - title: "Обо мне"
     url: /about
-  - title: "Фичи"
-    url: /index.html#Features
+  - title: "Портфолио"
+    url: /portfolio
   - title: "Контакты"
     url: /contact
 
