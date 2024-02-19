@@ -8,7 +8,7 @@ description: Статьи о веб-дизайне и создании сайт�
 <div id="Blog" class="uk-section uk-padding-remove-top">
 
   <article class="uk-article uk-padding-xsmall">
-    <h2 class="uk-heading-line"><span>Latest Blog Posts</span></h2>
+    <h2 class="uk-heading-line"><span>Свежие записи</span></h2>
     {% for post in paginator.posts %}
     <div>
       <h4><a class="uk-link-text"href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
