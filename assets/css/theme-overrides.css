@@ -29,6 +29,3 @@ blockquote {
 .uk-light, .uk-light .uk-link-muted a:hover, .uk-light .uk-table th, .uk-light a.uk-link-muted:hover, .uk-light blockquote footer {
     color: rgba(255,255,255,.7);
 }
-.uk-navbar-container { 
-  height: 60px; 
-}
