@@ -8,9 +8,11 @@ layout: page
          <div class="uk-child-width-expand@s" uk-grid>
     <div class="uk-grid-item-match">
         <div class="uk-card uk-card-default uk-card-body">
-
-          <div class="uk-section-large uk-overlay-primary uk-light uk-background-fixed uk-background-cover uk-background-top-center" style="background-image: url({{ page.image | relative_url }})">
-
+                <div uk-lightbox>
+                        <a href="{{ page.image | relative_url }}">
+      <img src="{{ page.image | relative_url }}">
+                        </a>
+                </div>
         </div>
      </div>
     <div>
