@@ -3,4 +3,107 @@ layout: page
 title: Часто задаваемые вопросы
 ---
 
-<section class="uk-width-1-1 uk-width-expand@m uk-first-column"><article class="uk-card uk-card-default uk-card-small uk-card-body uk-article tm-ignore-container"><ul class="uk-list-divider uk-list-large uk-accordion" uk-accordion="multiple: true"><li class=""><a class="uk-accordion-title" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a><div class="uk-accordion-content" aria-hidden="true" hidden=""><p>Vivamus imperdiet venenatis est. Phasellus vitae mauris imperdiet, condimentum eros vel, ullamcorper turpis. Maecenas sed libero quis orci egestas vehicula fermentum id diam. In sodales quam quis mi mollis eleifend id sit amet velit. Sed ultricies condimentum magna, vel commodo dolor luctus in. Aliquam et orci nibh. Nunc purus metus, aliquam vitae venenatis sit amet, porta non est. Proin vehicula nisi eu molestie varius. Pellentesque semper ex diam, at tristique ipsum varius sed. Pellentesque non metus ullamcorper, iaculis nibh quis, facilisis lorem. Sed malesuada eu lacus sit amet feugiat. Aenean iaculis dui sed quam consectetur elementum.</p></div></li><li class=""><a class="uk-accordion-title" href="#">Nullam massa sem, mollis ut luctus at, tincidunt a lorem?</a><div class="uk-accordion-content" aria-hidden="true" hidden=""><p>Aliquam sed dictum elit, quis consequat metus. Proin in mauris finibus urna lacinia laoreet sed id orci. Pellentesque volutpat tellus sit amet enim rutrum, vel eleifend metus consectetur. Sed lacinia urna a neque maximus placerat. Praesent blandit hendrerit dui non placerat. Sed malesuada sem sit amet arcu faucibus, sit amet accumsan nisl laoreet. Quisque auctor sit amet nisl rhoncus interdum. Nullam euismod odio sem, quis pulvinar purus gravida eget. Nullam molestie, lacus vel vehicula elementum, massa arcu bibendum lacus, vitae tempus justo orci id lectus. Duis justo neque, elementum eget ante in, condimentum condimentum ante. Maecenas quis eleifend risus. In hac habitasse platea dictumst. Nunc posuere ultrices dolor, at auctor lacus dignissim ut. Donec viverra imperdiet nisi, sit amet mattis massa pellentesque ac.</p></div></li><li><a class="uk-accordion-title" href="#">Aliquam pretium diam et ullamcorper malesuada?</a><div class="uk-accordion-content" hidden="" aria-hidden="true"><p>Praesent feugiat lectus faucibus tellus congue pharetra. In viverra vehicula pellentesque. Etiam consectetur ultricies magna at bibendum. Sed posuere libero ut nulla ornare, faucibus pellentesque odio pulvinar. Vestibulum feugiat ex id ex elementum egestas. Integer laoreet mollis risus, id efficitur neque. Pellentesque quis dolor faucibus, ultrices tellus id, vestibulum neque. Sed eros purus, dignissim id fermentum ut, lacinia laoreet odio. Sed mi erat, aliquet at facilisis quis, laoreet in massa. Pellentesque eu massa accumsan, iaculis erat eu, tincidunt sem. Quisque id orci id dui congue pretium. Pellentesque iaculis, dolor aliquet tempor laoreet, enim metus tincidunt massa, ut porttitor sem dui sit amet arcu. Vestibulum sodales laoreet enim, sit amet vestibulum nisl porttitor a.</p></div></li><li><a class="uk-accordion-title" href="#">Etiam suscipit at nisi eget auctor?</a><div class="uk-accordion-content" hidden="" aria-hidden="true"><p>Mauris id pellentesque metus. In quis arcu sed enim maximus pellentesque et eget velit. Etiam euismod enim vitae condimentum tristique.</p></div></li><li><a class="uk-accordion-title" href="#">Sed porta diam eget enim bibendum laoreet?</a><div class="uk-accordion-content" hidden="" aria-hidden="true"><p>Donec molestie sem et tellus vestibulum venenatis. Quisque iaculis ornare luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi velit nibh, ullamcorper eu imperdiet id, rutrum quis mi. Donec eu aliquet lorem. Nulla at lectus turpis. Sed et diam ac lorem iaculis lacinia.</p></div></li></ul></article></section>
+<div class="uk-section uk-section-muted">
+  <div class="uk-container">
+
+  <div uk-grid class="uk-child-width-1-2">
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label">FAQ</div>
+        <h3 class="uk-card-title">Do androids dream of electric sheep?</h3>
+        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label ion-bonfire">☄️</div>
+        <h3 class="uk-card-title ion-social-buffer-outline">Jeans</h3>
+        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label">FAQ</div>
+        <h3 class="uk-card-title">Natural selection</h3>
+        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label ion-bonfire">Instinct</div>
+        <h3 class="uk-card-title ion-social-buffer-outline">Variation under nature</h3>
+        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label">FAQ</div>
+        <h3 class="uk-card-title">Do androids dream of electric sheep?</h3>
+        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label ion-bonfire">☄️</div>
+        <h3 class="uk-card-title ion-social-buffer-outline">Jeans</h3>
+        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label">FAQ</div>
+        <h3 class="uk-card-title">Do androids dream of electric sheep?</h3>
+        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label ion-bonfire">☄️</div>
+        <h3 class="uk-card-title ion-social-buffer-outline">Jeans</h3>
+        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label">FAQ</div>
+        <h3 class="uk-card-title">Do androids dream of electric sheep?</h3>
+        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label ion-bonfire">☄️</div>
+        <h3 class="uk-card-title ion-social-buffer-outline">Jeans</h3>
+        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label">FAQ</div>
+        <h3 class="uk-card-title">Do androids dream of electric sheep?</h3>
+        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label ion-bonfire">☄️</div>
+        <h3 class="uk-card-title ion-social-buffer-outline">Jeans</h3>
+        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label">FAQ</div>
+        <h3 class="uk-card-title">Do androids dream of electric sheep?</h3>
+        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+      </div>
+    </div>
+    <div>
+      <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
+        <div class="uk-card-badge uk-label ion-bonfire">☄️</div>
+        <h3 class="uk-card-title ion-social-buffer-outline">Jeans</h3>
+        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </div>
+</div>
