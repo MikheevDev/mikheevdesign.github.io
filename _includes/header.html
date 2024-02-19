@@ -21,7 +21,9 @@
           {% assign url = link.url | relative_url %}
         {% endif %}
         <li class="{% if page.url contains link.url %}uk-active{% endif %}">
+          <div class="uk-navbar-item">
           <a href="{{ url }}" class="uk-button uk-button-default ">{{ link.title }}</a>
+          </div>
           <div class="uk-navbar-dropdown uk-border-rounded uk-background-muted">
             <ul class="uk-nav uk-navbar-dropdown-nav">
               {% for link in site.data.navigation.subnav %}
