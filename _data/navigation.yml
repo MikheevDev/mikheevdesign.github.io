@@ -3,7 +3,7 @@
 main:
   - title: "Обо мне"
     url: /about
-  - title: "Портфолио"
+  - title: "Проекты"
     url: /projects
   - title: "Контакты"
     url: /contact
