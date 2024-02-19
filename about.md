@@ -7,10 +7,10 @@ bigimg: /assets/img/bg.jpg
 <div class="uk-child-width-expand@s" uk-grid>
     <div class="uk-grid-item-match">
         <div class="uk-card uk-card-default uk-card-body">
-            <p>
+            <div uk-lightbox>
                 <a href="/assets/img/i-min.jpg" title="Михеев Сергей" alt="Михеев сергей">
   <img src="/assets/img/i-min.jpg" alt=""></a>
-            </p>
+            </div>
         </div>
      </div>
     <div>
