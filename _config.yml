@@ -59,7 +59,7 @@ timezone: Asia/Novosibirsk # https://en.wikipedia.org/wiki/List_of_tz_database_t
 collections:
   portfolio:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:title
 
 # 7. Site settings
 name: Веб-дизайнер Михеев Сергей
