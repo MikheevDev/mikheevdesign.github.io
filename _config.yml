@@ -57,7 +57,7 @@ timezone: Asia/Novosibirsk # https://en.wikipedia.org/wiki/List_of_tz_database_t
 
 # 5. Collections
 collections:
-  project:
+  portfolio:
     output: true
     permalink: /:collection/:path/
 
