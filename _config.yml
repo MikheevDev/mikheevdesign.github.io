@@ -56,9 +56,10 @@ timezone: Asia/Novosibirsk # https://en.wikipedia.org/wiki/List_of_tz_database_t
 
 
 # 5. Collections
-# Not using collections at this time
-# 6. Jekyll collections settings
-# Not using collections at this time
+collections:
+  project:
+    output: true
+    permalink: /:collection/:path/
 
 # 7. Site settings
 name: Веб-дизайнер Михеев Сергей
