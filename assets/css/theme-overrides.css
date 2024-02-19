@@ -36,3 +36,18 @@ blockquote {
     text-decoration: none;
     font-weight: bolder;
 }
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+
+.uk-card {
+  border-radius:5px;
+  overflow:hidden;
+}
+.uk-card-body:before {
+  position: absolute;
+  opacity:0.1;
+  font-family: "Font Awesome 5 Free";
+	font-weight: 100;
+  font-size: 8rem;
+  content: "\f581";
+  
+}
