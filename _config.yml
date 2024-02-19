@@ -66,7 +66,7 @@ title: MikheevDesign
 author: Mikheev Sergey
 email: f/xoqgdprr
 description: >- # this means to ignore newlines until "baseurl:"
-  Я веб-разработчик, занимаюсь разработкой сайтов разной специализации и разного уровня сложности, а также, графическим дизайном. Территориально нахожусь в Новосибирске.
+  Я веб-дизайнер, занимаюсь разработкой сайтов разной специализации и разного уровня сложности, а также, графическим дизайном. Территориально нахожусь в Новосибирске.
 baseurl: # the subpath of your site, e.g. /blog
 url: "https://mikheevdesign.ru" # the base hostname & protocol for your site, e.g. https://example.com
 avatar: /assets/i.jpg #path/to/avatar.png
