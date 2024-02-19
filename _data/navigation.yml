@@ -5,12 +5,12 @@ main:
     url: /about
   - title: "Портфолио"
     url: /projects
-  - title: "Контакты"
-    url: /contact
-
-toggle:
   - title: "Блог"
     url: /blog
+
+toggle:
+  - title: "Контакты"
+    url: /contact
 
 subnav:
   - title: "Архивы"
