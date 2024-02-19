@@ -1,7 +1,7 @@
 {% if include.name %}
   {% assign name = include.name %}
 {% else %}
-  {% assign name = "xoqgdprr" %}
+  {% assign name = "Обратная связь" %}
 {% endif %}
 
 {% assign name_id = name | downcase | replace: " ", "-" %}
@@ -23,18 +23,18 @@
     <legend class="uk-legend">{{ name }}</legend>
 
     <div class="uk-margin">
-      <label>Name:<input class="uk-input" id="name--{{ name_id }}" type="text" name="name" value="" placeholder="Your Name" required="required" /></label>
+      <label>Имя:<input class="uk-input" id="name--{{ name_id }}" type="text" name="name" value="" placeholder="Ваше Имя" required="required" /></label>
     </div>
 
     <div class="uk-margin">
-      <label>Email Address:<input class="uk-input" id="email--{{ name_id }}" type="email" name="email" value="" placeholder="email@website.com" required="required" /></label>
+      <label>Email Адрес:<input class="uk-input" id="email--{{ name_id }}" type="email" name="email" value="" placeholder="email@website.com" required="required" /></label>
     </div>
 
     <div class="uk-margin">
-      <label class="label" for="message--{{ name_id }}">Message:<textarea class="uk-textarea" id="message--{{ name_id }}" name="message" placeholder="Your message..." required="required"></textarea></label>
+      <label class="label" for="message--{{ name_id }}">Сообщение:<textarea class="uk-textarea" id="message--{{ name_id }}" name="message" placeholder="Ваше сообщение..." required="required"></textarea></label>
     </div>
 
-    <input class="button uk-button uk-button-primary" type="submit" value="Send message"/>
+    <input class="button uk-button uk-button-primary" type="submit" value="Отправить сообщение"/>
 
     {% if include.netlify_form %}
       <label  style="display:none">Don’t fill this out if you’re human: <input name="bot-field" /></label>
