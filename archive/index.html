@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: Post Archive
+title: Архив записей
 ---
 
 <div id="Archive" class="uk-section uk-padding-remove-top">
@@ -9,7 +9,7 @@ title: Post Archive
     {% assign sortedTags = site_tags | split:',' | sort %}
 
   <article class="uk-article uk-padding-xsmall">
-    <h2>Posts by tag</h2>
+    <h2>Записи по тегам</h2>
     {% for tag in sortedTags %}
     <div>
       <h3 id="{{tag | cgi_escape}}" class="uk-heading-line tag-name"><span>{{tag}}</span></h3>
