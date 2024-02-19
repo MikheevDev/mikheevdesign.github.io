@@ -9,11 +9,7 @@ layout: page
     <div class="uk-grid-item-match">
         <div class="uk-card uk-card-default uk-card-body">
                 {% assign image_path = '/assets/portfolio/' | append: project.image %}
-                <div uk-lightbox>
-                        <a href="{{ project.url | relative_url }}">
                           <img src="{{ image_path | relative_url }}" />
-                        </a>
-                </div>
         </div>
      </div>
     <div>
