@@ -12,7 +12,9 @@
         {% else %}
           {% assign url = link.url | relative_url %}
         {% endif %}
+        <button uk-toggle="target: #my-id" type="button">
         <li class="{% if page.url contains link.url %}uk-active{% endif %}"><a href="{{ url }}">{{ link.title }}</a></li>
+        </button>
         {% endfor %}
         {% for link in site.data.navigation.toggle %}
         {% if link.url contains "https" %}
