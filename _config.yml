@@ -75,7 +75,7 @@ locale: ru_RU
 
 to_top: true
 
-# disqus: ""
+disqus: "mikheevdesign"
 twitter: "mikheevdesign"
 github: "mikheevdev"
 buymeacoffee: "mikheevdesign"
