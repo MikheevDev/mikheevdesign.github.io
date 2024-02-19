@@ -8,8 +8,8 @@ bigimg: /assets/img/bg.jpg
     <div class="uk-grid-item-match">
         <div class="uk-card uk-card-default uk-card-body">
             <div uk-lightbox>
-                <a href="/assets/img/i-min.jpg" title="Михеев Сергей" alt="Михеев сергей">
-  <img src="/assets/img/i-min.jpg" alt=""></a>
+                <a href="/assets/i.jpg" title="Михеев Сергей" alt="Михеев сергей">
+  <img src="/assets/i.jpg" alt=""></a>
             </div>
         </div>
      </div>
