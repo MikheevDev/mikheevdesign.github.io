@@ -1,8 +1,8 @@
 # If you want to link only specific pages in your header, add the path to the
 # pages in order as they should show up.
 main:
-  - title: "Обо мне"
-    url: /about
+  - title: "Главная"
+    url: /
   - title: "Портфолио"
     url: /projects
   - title: "Блог"
@@ -19,8 +19,6 @@ subnav:
     url: /faq
 
 mobile:
-  - title: "Обо мне"
-    url: /about
   - title: "Портфолио"
     url: /projects
   - title: "Блог"
