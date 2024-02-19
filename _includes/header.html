@@ -12,7 +12,7 @@
         {% else %}
           {% assign url = link.url | relative_url %}
         {% endif %}
-        <li class="{% if page.url contains link.url %}uk-active{% endif %}"><a href="{{ url }}">{{ link.title }}</a></li>
+        <li class="uk-button uk-button-default {% if page.url contains link.url %}uk-active{% endif %}"><a href="{{ url }}">{{ link.title }}</a></li>
         {% endfor %}
         {% for link in site.data.navigation.toggle %}
         {% if link.url contains "https" %}
@@ -30,12 +30,11 @@
                   {% else %}
                   {% assign url = link.url | relative_url %}
                   {% endif %}
-                  <li class="uk-button uk-button-default {% if page.url contains link.url %}uk-active{% endif %} uk-nav-header"><a href="{{ url }}">{{ link.title }}</a></li>
+                  <li class="{% if page.url contains link.url %}uk-active{% endif %} uk-nav-header"><a href="{{ url }}">{{ link.title }}</a></li>
               {% endfor %}
             </ul>
           </div>
         </li>
-        </div>
         {% endfor %}
       </ul>
     </div>
