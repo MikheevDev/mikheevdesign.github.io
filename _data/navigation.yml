@@ -21,9 +21,9 @@ subnav:
 mobile:
   - title: "Обо мне"
     url: /about
-  - title: "Фичи"
-    url: /index.html#Features
+  - title: "Портфолио"
+    url: /projects
   - title: "Блог"
     url: /blog
-  - title: "Архив"
-    url: /archive
+  - title: "Контакты"
+    url: /contact
