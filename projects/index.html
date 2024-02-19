@@ -12,7 +12,7 @@ bigimg: /assets/img/bg.jpg
     <div class="uk-section">
 <div class="uk-container">
 <div class="uk-child-width-1-2@m" uk-grid>
-  {% for project in projects %}
+ {% for project in site.projects %}
     <div>
         <div class="uk-child-width-1-2@m" uk-grid>
             <div>
@@ -22,7 +22,7 @@ bigimg: /assets/img/bg.jpg
                 </div>
                 <div class="uk-card-body">
                     <h3 class="uk-card-title"><a class="uk-link-text"href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-                    <p> {{ project.excerpt | strip_html }}
+                    <p> {{ project.description }}
           <br><a href="{{ project.url | relative_url }}" class="post-read-more">[Read&nbsp;More]</a><br>
           {% unless forloop.last %}
           <hr>
