@@ -27,3 +27,6 @@ bigimg: /assets/img/bg.jpg
         </p>
     </div>
 </div>
+<div>
+    <br>
+</div>
