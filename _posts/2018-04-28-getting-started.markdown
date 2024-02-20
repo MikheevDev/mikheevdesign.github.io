@@ -3,6 +3,7 @@ layout: post
 title: "Getting Started"
 date: "2018-04-28 10:32:13 -0700"
 tags: [test, help, docs, installing]
+toc: true
 ---
 
 Jekyll-UiKit is available as a [Jekyll theme gem](https://jekyllrb.com/docs/themes/). It has been built with Github Pages in mind. Installing should be fairly simple.
