@@ -1,11 +1,13 @@
-{% if site.algolia %}
 <div class="uk-navbar-item">
   <a class="uk-icon-button" uk-icon="icon: search" href="#modal-full" uk-toggle></a>
     <div id="modal-full" class="uk-modal-full" uk-modal>
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-              <div id="search-searchbar"></div>
+              <div id="search-container">
+    <input type="search" name="search" id="search-input" placeholder="What are you looking for?">
+    <ul id="results-container"></ul>
+    </div>
             </div>
             <div class="uk-modal-body" uk-overflow-auto>
               <div id="search-hits" class="uk-section uk-padding-remove-top post-list">
@@ -14,4 +16,17 @@
         </div>
     </div>
 </div>
-{% endif %}
+
+    <!-- Script pointing to search-script.js -->
+    <script src="/js/search-script.js" type="text/javascript"></script>
+    
+    <!-- Configuration -->
+    <script>
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      searchResultTemplate: '<a href="{url}" tabindex="1"><p>{title}</p></a>',
+      noResultsText: '<p>No results found!</p>',
+      json: '/search.json'
+    })
+    </script>
