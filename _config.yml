@@ -93,9 +93,9 @@ RSS: true
 # Search Settings - you have to sign up for an algolia account and use your own credentials for this to work.
 
 algolia:
-  application_id: KMHLT5L375
+  application_id: 9LNA0LZ29T
   index_name: jekyll-uikit
-  search_only_api_key: e43ae3e3f3a00829f55ad49d6813f9e3
+  search_only_api_key: aa3c1d7b95255e88653af0a2d8d22400
   files_to_exclude:
     - about.md
     - CHANGELOG.md
