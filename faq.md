@@ -4,7 +4,7 @@ title: Часто задаваемые вопросы
 description: Конечно, все клиенты - уникальны. Однако есть общие, базовые вопросы, касающиеся веб-разработки, интернет-маркетинга, и дизайна, которые я встречаю чаще других.
 ---
 
-<div class="uk-section uk-section-muted">
+<div class="uk-section">
   <div class="uk-container">
 
   <div uk-grid class="uk-child-width-1-2">
