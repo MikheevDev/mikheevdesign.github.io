@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [jekyll javascript]
+tags: [jekyll, javascript]
 title: Как реализовать простой поиск в своем блоге Jekyll?
 description: Существует множество способов включения поиска на ваш веб-сайт Jekyll. Некоторые из них сложны в реализации, другие просты. Одним из таких инструментов является Simple Jekyll Search.
 ---
