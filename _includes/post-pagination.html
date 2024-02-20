@@ -6,7 +6,7 @@
   </li>
   {% else %}
   <li>
-    <a href="{{"/blog" | relative_url}}"><span class="uk-margin-small-right"  uk-pagination-previous></span>Back</a>
+    <a href="{{"/blog" | relative_url}}"><span class="uk-margin-small-right"  uk-pagination-previous></span>Назад</a>
   </li>
   {% endif %}
   {% if page.next.url %}
@@ -15,7 +15,8 @@
   </li>
   {% else %}
   <li class="uk-margin-auto-left">
-    <a href="https://twitter.com/{{site.twitter}}" target="_blank">Follow<span uk-icon="twitter" class="uk-margin-small-left"></span></a>
+     <script src="https://yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-curtain data-color-scheme="whiteblack" data-services="vkontakte,odnoklassniki,telegram,whatsapp,pinterest"></div>
   </li>
   {% endif %}
 </ul>
