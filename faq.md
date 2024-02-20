@@ -73,15 +73,17 @@ title: Часто задаваемые вопросы
     <div>
       <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
         <div class="uk-card-badge uk-label">FAQ</div>
-        <h3 class="uk-card-title">Natural selection</h3>
-        <p>Morebi round that's blue, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3 class="uk-card-title">Как продвигать сайт в Гугл?</h3>
+        <p>"Есть два основных способа:
+- Реклама в Google ads и оплата за каждый клик. (Цена за клик устанавливается Google и в может составлять от 10 до 450 грн.) Данный способ подходит для компаний у которых конкуренция в SEO слишком высокая, а продажи нужны уже сегодня. Стоит отметить, что неправильно настроенная реклама и выбранные ключевые слова могут дать нулевой результат, если у Вас или у ваших сотрудников нет опыта настройки рекламы, лучше этого самостоятельно не делать.
+- SEO продвижение - это продвижение сайта за счет уникального контента, ключевых слов, оптимизации сайта и множества других факторов которые влияют на лучшую индексацию сайта, данный способ продвижение требует специально обученного сотрудника с опытом от 2 лет.</p>
       </div>
     </div>
     <div>
       <div class="uk-card uk-card-default uk-card-body animated fadeIn uk-border-rounded">
         <div class="uk-card-badge uk-label">FAQ</div>
-        <h3 class="uk-card-title">Do androids dream of electric sheep?</h3>
-        <p>The obvious and implicit answer to the question is, "No, they dream of real sheep", just as we do.</p>
+        <h3 class="uk-card-title">Что такое трафик сайта и где его найти?</h3>
+        <p>Трафик - это количество кликов на ваш сайт. Данные по трафику можно посмотреть в Google Analytics или Яндекс Метрике. Подключить Google Analytics и Яндекс Метрику можно у меня.</p>
       </div>
     </div>
     <div>
