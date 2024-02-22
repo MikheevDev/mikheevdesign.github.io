@@ -17,11 +17,15 @@ subnav:
     url: /archive
   - title: "Faq"
     url: /faq
+  - title: "Цены"
+    url: /prices  
 
 mobile:
   - title: "Портфолио"
     url: /projects
   - title: "Блог"
     url: /blog
+  - title: "Цены"
+    url: /prices 
   - title: "Контакты"
     url: /contact
