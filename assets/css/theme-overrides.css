@@ -49,3 +49,27 @@ blockquote {
   content: "";
   
 }
+/* Plus icon */
+.uk-accordion-title::before {
+  display: inline-block;
+  content: '\f0ab';
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  background-image: none;
+  width: 1.4em;
+  height: 1.4em;
+  margin-left: 10px;
+  float: right;
+  text-rendering: auto;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Minus icon */
+.uk-open > .uk-accordion-title::before {
+  background-image: none;
+  content: '\f0aa';
+}
